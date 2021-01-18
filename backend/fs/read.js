@@ -37,7 +37,8 @@ function read(url) {
 }
 
 // read("../static/");
-const rs = fs.createReadStream("../static/testRead.txt", {
+
+const rs = fs.createReadStream("backend/static/testRead.txt", {
   encoding: "utf-8",
   // flags: "r", // 文件的操作方式，同readFile中的配置一样，这里默认是可读的是 r
   highWaterMark: 32, // 每次读取的个数 设定此项时 后续监听触发data事件
