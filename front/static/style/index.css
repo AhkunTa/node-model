@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.page-content {
+  padding:  1rem;
+}
+.top {
+  margin: 2rem 0;
+}
+
+.click-bar li {
+  list-style: none;
+  height: 2.5rem;
+  width: 50%;
+}
+
+.click-bar {
+  display: flex;
+  flex: 1 1 auto;
+  padding: 0 2rem;
+
+}
+
+.flex-bar {
+  padding:  0 1rem;
+  background: url('./img/BTN_battlepass_03b.png') no-repeat center/ 100% 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  line-height: 2.5rem;
+}
+.flex-bar.active {
+  background: url('./img/BTN_battlepass_03.png') no-repeat center/ 100% 100%;
+}
+.scroll-content {
+  padding: .5rem;
+  background-color: #ccc;
+  border-radius: .5rem;
+  /* height: 50rem;
+  overflow: scroll; */
+}
+
+.scroll-content ::-webkit-scrollbar{
+  display:none;
+}
+.list-item {
+  height: 5rem;
+  padding: .5rem;
+  margin-top: 10px;
+  border-radius: .5rem;
+  background: url('./img/BG_battlepass_line_02.png') #fff no-repeat right center/ auto 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-item:first-child {
+  margin-top: 0;
+}
+.list-item .left-content {
+  flex: 1 1 auto;
+  display: flex;
+  height: 100%;
+  max-width: 60%;
+}
+
+.list-item .right-content {
+  flex: 0 0 auto;
+}
+
+.list-item .right-content .btn {
+  flex: 0 0 auto;
+  height: 3rem;
+  width: 9rem;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+  background: url('./img/BTN_big_02.png')  no-repeat right center/ 100% auto;
+}
+
+.left-content .image{
+  width: auto;
+  height: 100%;
+  flex: 0 1 auto;
+  margin-right: .5rem;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
+}
+
+.left-content .content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left-content .content .title{
+  color: #0da2a0;
+  font-size: 1.5rem;
+}
+.left-content .content .line{
+  border-bottom-style: dotted;
+  border: 1px dotted black;
+}
+.left-content .content .time{
+  font-size: 1rem;
+}
+
+.time .info {
+  display: inline-block;
+  background-color: rgb(124, 124, 124);
+  color: #fff;
+  padding: 1px .5rem;
+  border-radius: 10rem;
+}
+.time .date {
+  color: rgb(124, 124, 124);
+}

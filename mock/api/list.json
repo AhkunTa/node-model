@@ -1,0 +1,62 @@
+{
+    "message": "200",
+    "retCode": 0,
+    "data": [
+      {
+        "id": 26,
+        "title": "sdf",
+        "title_img": "",
+        "notice_tIme": "1606215429",
+        "content": null,
+        "type": 0
+      },
+      {
+        "id": 23,
+        "title": "下次V型从",
+        "title_img": "",
+        "notice_tIme": "1606190566",
+        "content": null,
+        "type": 0
+      },
+      {
+        "id": 22,
+        "title": "水电费通过的染发鬼地方",
+        "title_img": "http://glynnwei-test.oss-cn-hangzhou.aliyuncs.com/webview/5786ea300d51b09eb703228ab4409feb.png",
+        "notice_tIme": "1606189222",
+        "content": null,
+        "type": 0
+      },
+      {
+        "id": 1,
+        "title": "「Special Set 5连招募」开启！",
+        "title_img": null,
+        "notice_tIme": "1602172800",
+        "content": null,
+        "type": 0
+      },
+      {
+        "id": 2,
+        "title": "「PURE属性招募」开启！",
+        "title_img": null,
+        "notice_tIme": "2020",
+        "content": null,
+        "type": 0
+      },
+      {
+        "id": 3,
+        "title": "「再次演出的序曲」活动开启！",
+        "title_img": "https://line3-prod-patch-bd.bi",
+        "notice_tIme": "2020",
+        "content": null,
+        "type": 0
+      },
+      {
+        "id": 4,
+        "title": "翻唱歌曲追加——《オトモダチフィルム》",
+        "title_img": null,
+        "notice_tIme": "2020",
+        "content": null,
+        "type": 0
+      }
+    ]
+  }

@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "自定义本地接口请求",
+  "main": "index.js",
+  "scripts": {
+    "dev": "run server",
+    "server": "node app.js",
+    "node-server": "node ./backend/node/app.js"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^1.0.6"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3"
+  }
+}
