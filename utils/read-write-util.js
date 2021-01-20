@@ -3,9 +3,9 @@ const path = require("path");
 const { COPYFILE_EXCL } = fs.constants;
 // 将static文件夹内所有内容复制到copy文件夹内
 
-// read("backend/static/", "backend/copy", (from, to) => {
-//   write(from, to);
-// });
+read("backend/static/", "backend/copy", (from, to) => {
+  write(from, to);
+});
 
 // 递归读取文件内容 文件路径下的所有 文件内容
 function read(from, to, callback) {
@@ -60,7 +60,7 @@ function write(from, to) {
       let tp = tar.slice(0, i + 1).join(path.sep);
       isEx(tp) || fs.mkdirSync(tp);
     });
-    // 使用流复制
+    // 使用读写流复制
     let rs = fs.createReadStream(from);
     let ws = fs.createWriteStream(to);
     console.log("流复制成功");
