@@ -1,14 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 const { COPYFILE_EXCL } = fs.constants;
-read("backend/static/", "backend/copy");
+// 将static文件夹内所有内容复制到copy文件夹内
 
-// 递归读取文件内容 文件路径下的所有 文件夹或文件内容
+// read("backend/static/", "backend/copy", (from, to) => {
+//   write(from, to);
+// });
+
+// 递归读取文件内容 文件路径下的所有 文件内容
 function read(from, to, callback) {
-  if (!fs.existsSync(from)) {
-    console.log("地址无文件");
-  }
-
   fs.stat(from, (err, stats) => {
     if (err) {
       console.log(err.message);
@@ -16,7 +16,8 @@ function read(from, to, callback) {
       let _from = path.resolve(from);
       if (stats.isFile()) {
         let _to = path.resolve(to);
-        write(_from, _to);
+        // write(_from, _to);
+        callback(_from, _to);
       } else if (stats.isDirectory()) {
         fs.readdir(_from, (err, files) => {
           if (err) {
@@ -25,8 +26,7 @@ function read(from, to, callback) {
           files.forEach(file => {
             let _path = path.join(_from, file);
             let _to = path.join(to, file);
-            read(_path, _to);
-            // console.log(_to, _from);
+            read(_path, _to, callback);
           });
         });
       } else {
@@ -39,10 +39,8 @@ function read(from, to, callback) {
 // 复制文件夹内所有文件
 function write(from, to) {
   let tar = to.split(path.sep);
+  // 移除最后一位
   tar.pop();
-  // let state = fs.statSync(to);
-  // if (!state.isDirectory()) {
-  // }
   let isEx = to => fs.existsSync(to);
   if (isEx(to)) {
     // 使用 fs copyfile
@@ -63,10 +61,14 @@ function write(from, to) {
       isEx(tp) || fs.mkdirSync(tp);
     });
     // 使用流复制
-    // 使用流的方法需要指定编码方式 当编码方式发生改变可能会错误
     let rs = fs.createReadStream(from);
     let ws = fs.createWriteStream(to);
-    console.log("流复制", to);
+    console.log("流复制成功");
     rs.pipe(ws);
   }
 }
+
+module.exports = {
+  read,
+  write,
+};
