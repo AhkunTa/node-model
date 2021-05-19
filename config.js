@@ -1,6 +1,6 @@
 module.exports = {
   port: "8080",
-  staticPath: "/static",
+  staticPath: "/front/static",
   dbPort: "27017",
   dbName: "myDB",
   dbCollection: "nodeTest",
